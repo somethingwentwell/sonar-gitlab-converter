@@ -12,7 +12,7 @@ npm i -g sonar-gitlab-converter
 
 ## Usage
 ```bash
-sonar-gitlab-converter --host=http://whyjihu.southeastasia.cloudapp.azure.com:9001 --token=c3FhXzkwZDY1ZDFmZjU2YzE5MGEwNWRmNzIxNTAxMjEzODU3NDk2YWIxYWI6 --project=www_public-example_sonar-qube-integration_AYQw63du1WXrh1AvkyAg
+sonar-gitlab-converter --host=<Host> --token=<Token> --project=<Project ID>
 ```
 
 Output:
