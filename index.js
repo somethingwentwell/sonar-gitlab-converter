@@ -28,18 +28,30 @@ const parser = (0, yargs_1.default)(process.argv.slice(2)).options({
         console.log('Please provide a token and project name');
         process.exit(1);
     }
-    const config = {
+    let authToken = Buffer.from(argv.token + ':').toString('base64');
+    console.log(authToken);
+    let config = {
+        method: 'get',
+        url: `${argv.host}/api/server/version`,
+        headers: {
+            'Authorization': `Basic ${authToken}`
+        }
+    };
+    let response = yield (0, axios_1.default)(config);
+    const version = response.data;
+    console.log(`Version: ${response.data}`);
+    config = {
         method: 'get',
         url: `${argv.host}/api/issues/search?componentKeys=${argv.project}`,
         headers: {
-            'Authorization': `Basic ${argv.token}`,
+            'Authorization': `Basic ${authToken}`,
         }
     };
     try {
-        let response = yield (0, axios_1.default)(config);
-        console.log(response.data);
+        response = yield (0, axios_1.default)(config);
+        // console.log(response.data);
         let sonarIssues = yield response.data.issues;
-        fs_1.default.writeFile('gl-sast-report.json', JSON.stringify((0, converter_1.convert)(sonarIssues)), function (err) {
+        fs_1.default.writeFile('gl-sast-report.json', JSON.stringify((0, converter_1.convert)(sonarIssues, version)), function (err) {
             if (err)
                 return console.log(err);
             console.log('Saved!');

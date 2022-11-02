@@ -12,7 +12,7 @@ npm i -g sonar-gitlab-converter
 
 ## Usage
 ```bash
-sonar-gitlab-converter --host=<Host> --token=<Token> --project=<Project ID>
+sonar-gitlab-converter --host=<host> --token=<token> --project=<project ID>
 ```
 
 Output:
