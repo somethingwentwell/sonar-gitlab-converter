@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"name": "GitHub",
+			"path": ".."
+		},
+		{
+			"name": "kaishingo365",
+			"path": "../../Downloads/kaishingo365"
+		},
+		{
+			"name": "GetAccessToken",
+			"path": "../../Downloads/kaishingo365 2/GetAccessToken"
+		},
+		{
+			"name": "GetAccessTokenAuth",
+			"path": "../../Downloads/kaishingo365 2/GetAccessTokenAuth"
+		},
+		{
+			"name": "node_modules",
+			"path": "../../Downloads/kaishingo365 2/node_modules"
+		},
+		{
+			"name": "redirect",
+			"path": "../../Downloads/kaishingo365 2/redirect"
+		},
+		{
+			"name": "ScheduledUpdate",
+			"path": "../../Downloads/kaishingo365 2/ScheduledUpdate"
+		},
+		{
+			"name": "UpdateLicense",
+			"path": "../../Downloads/kaishingo365 2/UpdateLicense"
+		}
+	],
+	"settings": {
+		"debug.internalConsoleOptions": "neverOpen"
+	}
+}
